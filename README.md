@@ -188,9 +188,6 @@ rag_pdf_chatbot-main/
 ├── .gitignore            # Git ignore rules
 ├── README.md             # This file
 │
-├── logs/                 # Application logs (auto-generated)
-│   └── app.log
-│
 └── faiss_index/          # FAISS vector store (auto-generated, gitignored)
     ├── index.faiss
     └── index.pkl
@@ -420,10 +417,7 @@ pip install -r requirements.txt
 
 ### Debugging
 
-Check logs for detailed error information:
-```bash
-tail -f logs/app.log
-```
+Logs are output to the console. Check Streamlit Cloud logs or your terminal for detailed error information.
 
 ---
 

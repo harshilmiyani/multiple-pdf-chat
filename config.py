@@ -41,10 +41,8 @@ class Config:
     
     # Logging Configuration
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-    LOG_FILE = BASE_DIR / "logs" / "app.log"
     
     @classmethod
     def ensure_directories(cls) -> None:
         """Ensure required directories exist."""
         cls.FAISS_INDEX_DIR.mkdir(exist_ok=True)
-        cls.LOG_FILE.parent.mkdir(exist_ok=True)

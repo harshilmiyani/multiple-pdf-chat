@@ -9,13 +9,13 @@ import streamlit as st
 from config import Config
 from constants import ERROR_PDF_READING, ERROR_TEXT_SPLITTING, ERROR_VECTOR_STORE
 
-# Setup logging
+# Setup logging - console only (works on Streamlit Cloud)
+# File logging removed for cloud compatibility
 logging.basicConfig(
     level=getattr(logging, Config.LOG_LEVEL),
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(Config.LOG_FILE),
-        logging.StreamHandler()
+        logging.StreamHandler()  # Console logging only
     ]
 )
 logger = logging.getLogger(__name__)
