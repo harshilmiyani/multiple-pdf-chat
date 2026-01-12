@@ -183,13 +183,14 @@ def handle_user_input(
         st.warning(MSG_PROCESS_PDFS)
         return
     
-    # Process question
-    response_output = process_question(
-        user_question,
-        model_name,
-        api_key,
-        st.session_state.vector_store
-    )
+    # Process question with loading indicator
+    with st.spinner("🤔 Processing your question..."):
+        response_output = process_question(
+            user_question,
+            model_name,
+            api_key,
+            st.session_state.vector_store
+        )
     
     if response_output:
         # Add to conversation history
@@ -226,10 +227,40 @@ def initialize_session_state() -> None:
 
 def render_sidebar() -> Tuple[str, Optional[str]]:
     """Render sidebar UI and return model name and API key."""
-    # Developer section with name and professional links
-    st.sidebar.markdown("### 👨‍💻 Developer")
-    st.sidebar.markdown("**Harshil Miyani**")
-    st.sidebar.markdown("")
+    # Logo/Name header - clickable to website (prominent logo)
+    st.sidebar.markdown(
+        """
+        <style>
+            .logo-link {
+                text-decoration: none;
+                color: inherit;
+                display: block;
+            }
+            .logo-link:hover h1 {
+                transform: scale(1.05);
+            }
+        </style>
+        <div style="text-align: center; margin-bottom: 25px; padding: 20px 0; border-bottom: 2px solid #e0e0e0;">
+            <a href="https://harshilmiyani.com" target="_blank" class="logo-link">
+                <h1 style="margin: 0; font-size: 32px; font-weight: 800; 
+                           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                           -webkit-background-clip: text;
+                           -webkit-text-fill-color: transparent;
+                           background-clip: text;
+                           cursor: pointer;
+                           transition: all 0.3s ease;
+                           letter-spacing: -1px;
+                           line-height: 1.2;">
+                    Harshil Miyani
+                </h1>
+                <p style="margin: 8px 0 0 0; font-size: 11px; color: #888; font-weight: 400; text-transform: uppercase; letter-spacing: 1px;">
+                    Click to visit website
+                </p>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
     
     # Source code link - prominent
     st.sidebar.markdown(
