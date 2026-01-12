@@ -47,7 +47,6 @@ echo "   Users will enter their Google API key in the browser UI."
 
 # Create necessary directories
 echo "📁 Creating necessary directories..."
-mkdir -p logs
 mkdir -p faiss_index
 
 echo ""

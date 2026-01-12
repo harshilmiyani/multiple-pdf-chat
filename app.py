@@ -5,7 +5,6 @@ A Streamlit-based application for chatting with PDF documents using RAG (Retriev
 import streamlit as st
 import pandas as pd
 import base64
-import logging
 from typing import Optional, List, Tuple
 from datetime import datetime
 

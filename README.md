@@ -12,7 +12,7 @@
 
 [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-architecture) • [Configuration](#-configuration)
 
-**[📂 View Source Code](https://github.com/harshilmiyani/multiple-pdf-chat)**
+**[🚀 Live Demo](https://multiple-pdf-chat.harshilmiyani.com/)** • **[📂 View Source Code](https://github.com/harshilmiyani/multiple-pdf-chat)**
 
 </div>
 
@@ -134,6 +134,10 @@ python -c "import langchain; print(f'LangChain {langchain.__version__}')"
 ---
 
 ## 🎯 Usage
+
+### Try the Live Demo
+
+🌐 **[Try it online](https://multiple-pdf-chat.harshilmiyani.com/)** - No installation required! Just upload your PDFs and start asking questions.
 
 ### Quick Start
 
