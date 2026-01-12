@@ -77,8 +77,8 @@ Before you begin, ensure you have:
 
 ```bash
 # Clone the repository
-git clone <your-repository-url>
-cd rag_pdf_chatbot-main
+git clone https://github.com/harshilmiyani/multiple-pdf-chat.git
+cd multiple-pdf-chat
 
 # Run the setup script
 chmod +x setup.sh
@@ -182,7 +182,7 @@ python -c "import langchain; print(f'LangChain {langchain.__version__}')"
 ## 📁 Project Structure
 
 ```
-rag_pdf_chatbot-main/
+multiple-pdf-chat/
 ├── app.py                 # Main Streamlit application (UI & logic)
 ├── config.py              # Configuration management (settings)
 ├── constants.py           # Application constants (messages, templates)
@@ -529,7 +529,7 @@ Contributions are welcome! Here's how you can help:
 
 1. **Fork the Repository**
    ```bash
-   git clone https://github.com/yourusername/rag_pdf_chatbot-main.git
+   git clone https://github.com/harshilmiyani/multiple-pdf-chat.git
    ```
 
 2. **Create a Feature Branch**
@@ -591,7 +591,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🆘 Support
 
-- **Issues**: [Open an issue](https://github.com/yourusername/rag_pdf_chatbot-main/issues)
+- **Issues**: [Open an issue](https://github.com/harshilmiyani/multiple-pdf-chat/issues)
 - **Questions**: Contact via [LinkedIn](https://www.linkedin.com/in/harshilmiyani/)
 - **Documentation**: Check this README and code comments
 
