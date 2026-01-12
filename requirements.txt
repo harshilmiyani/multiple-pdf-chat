@@ -1,0 +1,29 @@
+# Core Framework
+streamlit>=1.28.0,<2.0.0
+
+# LangChain Ecosystem
+# Install langchain first - it will pull compatible langchain-core
+langchain>=1.2.0,<2.0.0
+langchain-community>=0.4.0,<1.0.0
+langchain-google-genai>=4.0.0,<5.0.0
+langchain-huggingface>=1.0.0,<2.0.0
+# langchain-text-splitters - install without version constraint to let pip resolve compatibility
+langchain-text-splitters
+
+# Vector Store & Embeddings
+faiss-cpu>=1.7.4,<2.0.0
+sentence-transformers>=2.2.0,<3.0.0
+transformers>=4.30.0,<5.0.0
+
+# PDF Processing
+PyPDF2>=3.0.0,<4.0.0
+
+# Google AI
+google-ai-generativelanguage>=0.10.0,<1.0.0
+
+# Data Processing
+pandas>=2.0.0,<3.0.0
+
+# Utilities
+wikipedia>=1.4.0,<2.0.0
+# python-dotenv is optional (not required for client-side only mode)
